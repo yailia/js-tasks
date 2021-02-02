@@ -6,58 +6,47 @@ const array = [
 ];
 
 
-function firstArrayPrint (array) {
-  for (i of array[0]) { console.log(i)}
-  array.splice(0, 1)
-  return array
-}
-
-function secondStepPrint (array) {
-  const newArray = []
-  for (let i = 0; i < array.length; i++) {
-    const newItem = array[i]
-    const lastNum = newItem.length - 1
-    const arrayLastIndex = newItem[lastNum]
-    console.log(arrayLastIndex)
-    newItem.splice(lastNum, 1)
-    newArray.push(newItem)
+function goRight (arr) {
+  if(array){
+    for (i of arr[0]) console.log(i)
+    arr.shift()
   }
-  return newArray
-}
+  return arr
 
-function thirdStepPrint (array) {
+};
 
-  const lastArray = array.length - 1
-  const reverseArr = array[lastArray].reverse();
-  for (i of reverseArr) {console.log(i)}
-  reverseArr.reverse()
-  array.splice(lastArray, 1);
-  return array
-}
+function goDown (arr) {
+  if(array) {
+    for (i of arr) console.log(i.pop())
+  } 
+  return arr
+};
 
-function lastStepPrint (array) {
-  const newArray = []
-  for (let i = array.length - 1; i >= 0; i--) {
-    const newItem = array[i]
-    const arrayFirstIndex = newItem[0]
-    console.log(arrayFirstIndex)
-    newItem.splice(0, 1)
-    newArray.push(newItem)
+function goLeft (arr) {
+  if (array){
+    const lastI = arr.length - 1
+    const needArr = arr[lastI];
+    for (let i = lastI + 1; i >= 0; i--) console.log(needArr[i])
+    arr.pop()
   }
-  return newArray
+  return arr
 }
 
-
-function spiral (array) {
-  if (array.length > 0) {
-    const firstStep = firstArrayPrint(array)
-    const secondStep = secondStepPrint(firstStep)
-    const thirdStep = thirdStepPrint(secondStep)
-    const laststep = lastStepPrint(thirdStep)
-    laststep.reverse()
-    spiral(laststep)
+function goUp (arr) {
+  if (array) {
+    for (let i = arr.length -1 ; i >=0; i--) console.log(arr[i].shift())
   }
-  else console.log('Кончено')
+  return arr
 }
 
-spiral(array)
+function loop (array) {
+  while(array.length > 0){
+    const right = goRight(array)
+    const down = goDown(right)
+    const left = goLeft(down)
+    const up = goUp(left)
+    }
+    console.log ('Конец')
+  }
+
+loop(array)
