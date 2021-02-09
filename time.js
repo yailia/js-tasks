@@ -16,13 +16,11 @@ function timeNow() {
   ]
 
   const dateNow = new Date;
-  const dayNow = dateNow.getDay()
   const minutes = dateNow.getMinutes() +'';
   const seconds = dateNow.getSeconds() +'';
   const minutesResult = minutes.length === 1 ? '0' + minutes : minutes;
   const secondsResult = seconds.length === 1 ? '0' + seconds : seconds;
   console.log('Today is: ', dayOfWeek[dateNow.getDay()], 'Current time is: ', dateNow.getHours(), ' : ', minutesResult, ' : ', secondsResult);
-  // console.log(seconds.length)
 };
 
 const timerId = setInterval(timeNow, 50);
