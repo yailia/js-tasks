@@ -2,7 +2,7 @@
 // https://www.w3resource.com/javascript-exercises/javascript-array-exercises.php
 
 // Test Data :
-console.log(first([7, 9, 0, -2]));
+console.log(first([7, 9, 0, -2],0));
 console.log(first([],3));
 console.log(first([7, 9, 0, -2],3));
 console.log(first([7, 9, 0, -2],6));
@@ -14,8 +14,7 @@ console.log(first([7, 9, 0, -2],-3));
 // [7, 9, 0, -2]
 // []
 
-function first (array, n) {
-  if (!n) return array[0];
-  else if (n > array.length) return array;
-  return n < 0 ? array = [] : array.splice(0, n);
+function first (array, n = 1)  {
+  if (n > array.length) return array;
+  return n < 0 ? array.splice(n, n * -1) : array.splice(0, n);
 }
