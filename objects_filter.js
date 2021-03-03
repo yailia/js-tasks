@@ -10,24 +10,31 @@ const objects = [
   { name: 'Иван', surname: 'Иванов' },
   { name: 'Пётр', surname: 'Петров' }
 ];
-const prop = 'name';
-const propValue = 'Иван'
-const propObj = []
+// const prop = 'name';
+// const propValue = 'Иван'
+// const propObj = []
+
+// const key = 'name';
+// function objectPropFilter(objects, prop, propValue) {
+
+//   for (let i = 0; i < objects.length; i++) {
+//       const object = objects[i]
+//       if (object[prop] === propValue) {
+//           const newArr = [];
+//           newArr[0] = `name: ${object.name}`;
+//           newArr[1] = `surname: ${object.surname}`;
+//           return object
+//       }
+//    }
+// }
+
+// const result = objectPropFilter(objects, prop, propValue)
+
+// console.log(result)
 
 
-function objectPropFilter(objects, prop, propValue) {
-
-  for (let i = 0; i < objects.length; i++) {
-      const object = objects[i]
-      if (object[prop] === propValue) {
-          const newArr = [];
-          newArr[0] = `name: ${object.name}`;
-          newArr[1] = `surname: ${object.surname}`;
-          return object
-      }
-   }
+function objectPropFilter (arr, key, val) {  
+  return arr.filter(obj => obj[key] === val)
 }
 
-const result = objectPropFilter(objects, prop, propValue)
-
-console.log(result)
+console.log(objectPropFilter(objects, 'name', 'Иван'));
