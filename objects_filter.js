@@ -8,15 +8,14 @@
 const objects = [
   { name: 'Василий', surname: 'Васильев' },
   { name: 'Иван', surname: 'Иванов' },
+  { name: 'Иван', surname: 'Иванов' },
   { name: 'Пётр', surname: 'Петров' }
 ];
 // const prop = 'name';
 // const propValue = 'Иван'
 // const propObj = []
-
 // const key = 'name';
 // function objectPropFilter(objects, prop, propValue) {
-
 //   for (let i = 0; i < objects.length; i++) {
 //       const object = objects[i]
 //       if (object[prop] === propValue) {
@@ -27,9 +26,7 @@ const objects = [
 //       }
 //    }
 // }
-
 // const result = objectPropFilter(objects, prop, propValue)
-
 // console.log(result)
 
 
