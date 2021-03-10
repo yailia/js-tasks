@@ -11,7 +11,7 @@
 
 isString = function(input) {
   if (!input) return false;
-  return Object.prototype.toString.call(input) === '[object String]' 
+  return typeof input === "string" || input instanceof String;
 };
 console.log(isString('w3resource'));
 console.log(isString([1, 2, 4, 0]));
