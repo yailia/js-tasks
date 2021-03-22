@@ -10,10 +10,11 @@
 
 
 isString = function(input) {
-  if (!input) return false;
-  return typeof input === "string" || input instanceof String;
+  return input instanceof String;
 };
-console.log(isString('w3resource'));
+console.log(isString(String));
 console.log(isString([1, 2, 4, 0]));
 console.log(isString(''));
 console.log(isString({}));
+console.log(isString(null));
+console.log(isString(NaN));
