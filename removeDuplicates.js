@@ -9,15 +9,31 @@ https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array
  * @param {number[]} nums
  * @return {number}
  */
- var removeDuplicates = function(nums) {
-     for (let i = 1; i < nums.length; i++) {
+//  var removeDuplicates = function(nums) {
+//      for (let i = 1; i < nums.length; i++) {
+//       if (nums[i] === nums[i - 1]) {
+//           nums.splice(i, 1);
+//           i = 0;
+//         }
+//     }
+//   return nums.length;
+// }
+
+var removeDuplicates = function(nums) {
+      for (let i = 1; i < nums.length; i++) {
       if (nums[i] === nums[i - 1]) {
-          nums.splice(i, 1);
+          nums[i] = '';
           i = 0;
+          console.log(nums)
         }
     }
-  return nums.length;
-}
+  
+  };
+
+
+// пройтись по массиву
+// сравнить числа
+// если правое равно левому, то 
 
 
 const nums = [1,1,2];
