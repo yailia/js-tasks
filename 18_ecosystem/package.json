@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "card-validation",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint ./",
+    "lint:report": "eslint ./",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-formatter-gitlab": "^2.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "vite": "^2.6.4"
+  },
+  "dependencies": {
+    "card-validator": "^8.1.1",
+    "credit-card-input-mask": "^3.0.0",
+    "credit-card-validator": "^1.0.8",
+    "creditcard.js": "^3.0.13",
+    "crel": "^4.2.1",
+    "email-validator": "^2.0.4"
+  }
+}
